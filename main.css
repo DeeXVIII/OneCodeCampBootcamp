@@ -1,0 +1,23 @@
+ /* SELECTORS */
+ /* tag selector */
+ h1 {
+    color: red;
+ }
+/* class selector */
+ .font { 
+    color: blue;
+ }
+ /* id selector*/
+ #cat {
+    color: pink;
+ }
+
+.col {
+    background-color: rgba(11, 239, 239, 0.879);
+    display: block;
+}
+
+li {
+    display: inline;
+    width: 10%;
+}
