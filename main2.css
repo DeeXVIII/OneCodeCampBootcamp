@@ -54,7 +54,6 @@ body {
     min-height: 65px;
     width: 310px;
     background-color: #FFFF88;
-    display: inline-block;
 }
 
 #logo, #navigation, #about, #advertisement, .sponsors {
