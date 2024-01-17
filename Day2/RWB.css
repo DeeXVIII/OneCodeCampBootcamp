@@ -1,0 +1,48 @@
+/* @media only screen and (max-width: 480px)
+{
+    .sm-o {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 481px)
+{
+    .md-1 {
+        width: 25%;
+        background-color: red;
+    }
+}
+
+@media only screen and (min-width: 1023px)
+{
+    .lg-2 {
+        width: 50%;
+        background-color: yellow;
+    }
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 480px){
+    .mobile {
+        width: 25%;
+        background-color: aqua;
+    }
+}
+
+@media only screen and (min-width: 481px){
+    .tablet {
+        width: 50%;
+        background-color: bisque;
+    }
+}
+
+@media only screen and (min-width: 1023px){
+    .desktop {
+        width: 100%;
+        background-color: goldenrod;
+    }
+}
