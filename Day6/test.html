@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Circles</title>
+  <style>
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      transition: transform 0.3s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click anywhere on the document (except buttons) to create circles</h1>
+  <div id="container"></div>
+  
+  <!-- Example buttons with different colors -->
+  <button onclick="circle('red')">Red</button>
+  <button onclick="circle('blue')">Blue</button>
+  <button onclick="circle('green')">Green</button>
+
+  <script>
+    function circle(color) {
+      document.addEventListener("click", function(event) {
+        // Check if the clicked element is a button
+        if (event.target.tagName.toLowerCase() === 'button') {
+          return; // Do nothing if a button was clicked
+        }
+
+        const circle = document.createElement("div");
+        circle.className = "circle";
+        circle.style.backgroundColor = color; // Set the circle color
+
+        const radius = Math.floor(Math.random() * 191) + 10;
+        const halfradius = radius / 2;
+
+        circle.style.width = `${radius}px`;
+        circle.style.height = `${radius}px`;
+        circle.style.left = `${event.clientX - halfradius}px`;
+        circle.style.top = `${event.clientY - halfradius}px`;
+
+        document.getElementById("container").appendChild(circle);
+
+        setTimeout(function() {
+          circle.style.transform = "scale(0)";
+        }, 500);
+
+        setTimeout(function() {
+          document.getElementById("container").removeChild(circle);
+        }, 800);
+      });
+    }
+  </script>
+</body>
+</html>
