@@ -122,3 +122,67 @@
 
 
 //JS BUILT IN METHODS
+
+//JS STRING METHODS
+
+//Split - stores to another variable the changes from the original value: inside the parameter will be character where it will be separated called the marker: not case sensitive
+// const message = "Hello, World!";
+// const words = message.split(",");
+
+// console.log(words);
+// console.log(words[0]);
+
+//Includes - look for the parameter if it's included in the sentence: returns a boolean value
+// const sentence = "The quick brown fox jumps over the lazy dog.";
+// const containsWord = sentence.includes("fox");
+
+// console.log(containsWord);
+
+//length - the numbers of characters in the string include the space and other formatiing symbols
+
+// const sampleString = "Welcome to Modern JS Features!";
+// const strlength = sampleString.length;
+
+// console.log(strlength);
+
+//Max - gives the biggest number in the group
+
+// let arr = [1, 2, 3, 4, 5, 6];
+// const maxNumber = Math.max(10, 5, 20);
+// const maxNumberArr = Math.max(arr);
+
+// console.log(maxNumber);
+//console.log(maxNumberArr);
+
+//Min
+// const minNumber = Math.min(10, 5, 20);
+
+// console.log(minNumber);
+
+//random
+// const randomValue = Math.random();
+// console.log(randomValue);
+
+//Floor - looks for the whole number
+// const roundedNumber = Math.floor(3.7);
+// console.log(roundedNumber);
+
+//Ceil - looks for the number then plus 1
+// const roundedNumber = Math.ceil(3.7);
+// console.log(roundedNumber);
+
+//round - follows the regular rounding of number in Math
+// const roundedNumber = Math.round(3.7);
+// console.log(roundedNumber);
+
+//nested math methods
+// function getRandomInt(min, max)
+// {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+
+// const randomInteger = getRandomInt(1, 10);
+// console.log(randomInteger);
