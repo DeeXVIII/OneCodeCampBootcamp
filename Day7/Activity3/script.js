@@ -20,14 +20,14 @@ if((birthMonth < 1) || (birthMonth > 12))
 {
     console.log(`You entered an INVALID Month. Please enter a month from 1 - 12.`);
 }
+else if(birthMonth === 2 && birthDate === 29 && !isLeapYear(birthYear))
+{
+    console.log("Invalid date. February 29 is valid only in leap years.");
+}
 else if((birthDate < 1) || (birthDate > new Date(birthYear, birthMonth, 0).getDate()))
 {
     console.log(`You enetered an INVALID DAY of the given month. Please enter a valid day.`);
 }
-// else if(birthMonth === 2 && birthDate === 29 && !isLeapYear(birthYear))
-// {
-//     console.log("Invalid date. February 29 is valid only in leap years.");
-// }
 else if((birthMonth === today.getMonth() + 1) && (birthDate === today.getDate()))
 {
     console.log(`You're ${Math.floor(ageInYears)}  years old.`);
@@ -38,7 +38,7 @@ else
     console.log(`You're ${Math.floor(ageInYears)} years old.`);
 }
 
-// function isLeapYear(year)
-//  {
-//     return (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0));
-// }
+function isLeapYear(year)
+ {
+    return (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0));
+}
