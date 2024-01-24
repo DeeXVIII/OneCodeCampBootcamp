@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timer</title>
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div id="main">
+            <h1>TIMER</h1>
+            <div id="holder">
+                <label for="timeInput">Enter time (1-60 in minutes)</label><br>
+                <input type="number" id="timeInput" min="1" max="60"><br>
+                <button onclick="startTimer()" id="start">Start</button>
+                <button onclick="resetTimer()" id="reset">Reset</button>
+                <button onclick="stopTimer()" id="stop">Stop</button>
+               </div>
+        
+               <div id="timer">00:00</div>
+        </div>
+       
+        
+       <!-- link JS -->
+        <script src="script.js"></script>
+    </body>
+</html>
