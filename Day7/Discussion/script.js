@@ -1,4 +1,4 @@
-// //ECMA Script
+// //ECMA 6 Script
 
 // //Block Scope variables
 // function example()
