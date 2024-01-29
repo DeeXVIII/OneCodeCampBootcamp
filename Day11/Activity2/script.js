@@ -80,6 +80,7 @@ let defendant2 = new Defendant("Onel", 25);
 defendant2.assignCase("Malicious Mischief", 3, 3, 3, 18, 75);
 TrialCourt.initiateTrial(defendant2, prosecutor);
 
+//3rd Trial
 let defendant3 = new Defendant("Ryu", 32);
 defendant3.assignCase("Theif", 3, 5, 3, 20, 60);
 TrialCourt.initiateTrial(defendant3, prosecutor1);
