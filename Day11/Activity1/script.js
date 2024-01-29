@@ -20,7 +20,7 @@ Sold: ${this.sold}`);
     {
         if (this.stock > 0)
         {
-            console.log("Buying...");
+            console.log(`Buying ${this.name}`);
             this.sold++;
             this.stock--;
         }
@@ -33,7 +33,7 @@ Sold: ${this.sold}`);
     {
         if(this.sold > 0)
         {
-            console.log(`Returning...`);
+            console.log(`Returning ${this.name}`);
             this.sold--;
             this.stock++;
         }
@@ -170,7 +170,7 @@ class EmailBuilder
 Recipient: ${this.email.recipient}
 Subject: ${this.email.subject}
 Body: ${this.email.body}
-Attachments: ${JSON.stringify(this.email.attachments)}`);
+Attachments: ${this.email.attachments}`);
     }
 }
 
@@ -178,6 +178,7 @@ Attachments: ${JSON.stringify(this.email.attachments)}`);
 //Instance
 const emailBuilder = new EmailBuilder();
 
+//chaining method
 emailBuilder
     .setRecipient('Yuzuha@ninjago.com')
     .setSubject('Meeting Tomorrow')
@@ -185,12 +186,14 @@ emailBuilder
     .addAttachment('Document.pdf')
     .send();
 
+    //instance
 const emailBuilder2 = new EmailBuilder();
 
+//chaining
 emailBuilder2
     .setRecipient('Ryuga@ninjago.com')
     .setSubject('Meeting Next Week')
     .setBody(`Hi Ryuga-san, we'll have a meeting next week for our new project. See you soon!`)
-    .addAttachment('Project Details.pdf')
+    .addAttachment('Array(1)')
     .send();
 */
